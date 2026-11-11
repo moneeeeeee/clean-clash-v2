@@ -3,28 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Clean Clash</title>
+  <title>Clean Clash – Chore Timer</title>
+  <meta name="description" content="Time your chores and beat your own best times. A small browser stopwatch with a per-chore leaderboard." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>💎 Clean Clash</h1>
+  <main class="container">
+    <h1>Clean Clash</h1>
+    <p class="tagline">Time a chore. Beat your best.</p>
 
     <div class="chore-row">
-      <input type="text" id="Chore" placeholder="Enter chore name..." />
-      <button id = "clearAllBtn">Clear All chores</button>
+      <label class="visually-hidden" for="Chore">Chore name</label>
+      <input type="text" id="Chore" placeholder="Enter chore name..." maxlength="40" autocomplete="off" />
     </div>
-    
-    <div class="timer" id="Timer">00:00:00</div>
+
+    <div class="timer" id="Timer" role="timer" aria-live="off">00:00:00.0</div>
 
     <div class="buttons">
-      <button id="startBtn">Start</button>
-      <button id="stopBtn">Stop</button>
-      <button id="resetBtn">Reset</button>
+      <button id="startBtn" type="button">Start</button>
+      <button id="stopBtn" type="button" disabled>Stop &amp; Save</button>
+      <button id="resetBtn" type="button">Reset</button>
     </div>
 
-    <h2>Top Times</h2>
+    <p id="Status" class="status" role="status" aria-live="polite"></p>
+
+    <div class="board-header">
+      <h2>Top Times</h2>
+      <button id="clearAllBtn" type="button" class="link-btn">Clear all chores</button>
+    </div>
     <div id="Leaderboard"></div>
+  </main>
 
   <script src="script.js"></script>
 </body>
