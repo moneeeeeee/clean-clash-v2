@@ -2,7 +2,7 @@
 
 A small browser stopwatch that turns chores into a competition against your own best times.
 
-**Live demo:** https://moneeeeeee.github.io/clean-clash/
+**Live demo:** https://moneeeeeee.github.io/clean-clash-v2/
 
 ## What it does
 
